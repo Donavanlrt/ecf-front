@@ -156,6 +156,46 @@ a {
     display: none;
 }
 
+.relative {
+    position: relative;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#blob-1 {
+    width: 256px;
+    height: 256px;
+    opacity: 0.05;
+    transform: translateX(-50%);
+}
+
+.dot {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 128px;
+    height: 128px;
+    z-index: -1;
+    fill: #d9c5ff;
+}
+
+#dot-1 {
+    transform: translate(40px, 40px);
+}
+
+#dot-2 {
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
 .section {
     padding: 96px 0;
     align-items: center;
@@ -286,6 +326,15 @@ img {
 
     .flex-buttons {
         justify-content: center;
+    }
+
+    #dot-2 {
+        width: 80px;
+        height: 80px;
+    }
+
+    .installed {
+        margin-top: 50px !important;
     }
 }
 
