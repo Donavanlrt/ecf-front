@@ -33,3 +33,18 @@ function addYear(event, year) {
 
     $('#year').innerHTML = parseInt($('#year').innerHTML) + year;
 }
+
+function random(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function randomNumbers(event) {
+    event.preventDefault();
+
+    $('#orders-stat').innerHTML = random(99, 99999)+'+';
+    $('#customers-stat').innerHTML = random(99, 99999)+'+';
+    $('#chefs-stat').innerHTML = random(99, 99999)+'+';
+} 
