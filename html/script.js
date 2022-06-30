@@ -47,4 +47,20 @@ function randomNumbers(event) {
     $('#orders-stat').innerHTML = random(99, 99999)+'+';
     $('#customers-stat').innerHTML = random(99, 99999)+'+';
     $('#chefs-stat').innerHTML = random(99, 99999)+'+';
-} 
+}
+
+function submitForm(event) {
+    event.preventDefault();
+
+    let email = $('#email').value;
+    $('#email').value = '';
+
+    $('#form').style.display = 'none';
+    $('#title-form').style.display = 'flex';
+    $('#title-form').innerHTML = 'Merci '+email;
+
+    setTimeout(() => {
+        $('#form').style.display = 'flex';
+        $('#title-form').style.display = 'none';
+    }, 5000);
+}
