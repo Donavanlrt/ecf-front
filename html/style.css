@@ -1,0 +1,301 @@
+body {
+    font-family: Inter, sans-serif;
+    margin: 0;
+    color: #243e63;
+    box-sizing: border-box;
+    padding-top: 32px;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 32px;
+}
+
+.flex {
+    display: flex;
+}
+
+.menu {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-menu {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 32px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+.mobile-menu > div {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.mobile-menu > div a {
+    font-size: 18px;
+}
+
+.mobile-menu > div a:not(.btn) {
+    margin: 12px 0;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: 0.5s;
+}
+
+.mobile-menu > div a:not(.btn):hover {
+    color: #6415ff;
+    border-color: #6415ff;
+}
+
+.mobile-menu .btn {
+    margin: 10px 0;
+}
+
+.mobile-menu, .closed, .open {
+    display: none;
+}
+
+.closed, .open {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.closed:hover, .open:hover {
+    color: #6415ff;
+}
+
+.desktop-menu a:not(.btn) {
+    margin: 0 24px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: 0.5s;
+}
+
+.desktop-menu a:not(.btn):hover {
+    color: #6415ff;
+    border-color: #6415ff;
+}
+
+.desktop-menu a.login {
+    margin-left: 48px;
+}
+
+.btn {
+    background-color: #6415ff;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    padding: 12px 32px;
+    border-radius: 4px;
+    transition: 0.5s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #5011cc;
+}
+
+.btn-lg {
+    font-size: 16px;
+    padding: 14px 36px;
+}
+
+.bg-text {
+    background-color: #6415ff;
+    color: #fff;
+    padding: 0 16px;
+    line-height: 1.4;
+    transform: skewX(-12deg);
+}
+
+.logo {
+    align-items: center;
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: 0.6px;
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: #6415ff;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 12px;
+}
+
+#title {
+    display: none;
+}
+
+#video iframe {
+    display: none;
+}
+
+.section {
+    padding: 96px 0;
+    align-items: center;
+}
+
+.w-1\/2 {
+    width: 50%;
+}
+
+#section-1 .w-1\/2:first-child {
+    padding-right: 20px;
+}
+
+#section-2 .w-1\/2:first-child {
+    padding-right: 60px;
+}
+
+.section p {
+    margin: 30px 50px 30px 0;
+    color: #718096;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.image {
+    border-radius: 40px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.section h1, .section h2 {
+    font-size: 50px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.section h5 {
+    margin: 0 0 20px 0;
+    color: #6415ff;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.bg-text {
+    display: inline-block;
+}
+
+.flex-buttons {
+    align-items: center;
+}
+
+.btn-play {
+    margin-left: 20px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    color: #718096;
+}
+
+.btn-play:hover {
+    color: #6415ff;
+}
+
+.btn-play svg {
+    stroke-width: 1px;
+    width: 50px;
+    height: 50px;
+}
+
+.btn-play span {
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+#title {
+    color: #38b2ac;
+    font-size: 24px;
+    text-align: center;
+    flex-grow: 1;
+    font-weight: 400;
+}
+
+@media (min-width: 1024px) {
+    .mobile-menu, .open, .closed {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .closed {
+        display: block;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .section {
+        flex-direction: column;
+        text-align: center;
+        max-width: 28rem;
+        margin: auto;
+    }
+
+    #section-1 {
+        max-width: none;
+    }
+
+    .w-1\/2 {
+        width: 100%;
+        margin-bottom: 50px;
+        padding: 0 !important;
+    }
+
+    .section h1, .section h2 {
+        font-size: 36px;
+    }
+
+    .section p {
+        font-size: 14px;
+        margin: 30px 0;
+    }
+
+    .flex-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .flex-buttons {
+        flex-direction: column;
+    }
+
+    .btn-play {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
