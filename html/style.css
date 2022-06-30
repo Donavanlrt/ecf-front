@@ -375,6 +375,103 @@ img {
     color: #5011cc;
     margin: 0 !important;
 }
+
+footer {
+    background-color: #edf2f6;
+    padding: 100px 0;
+}
+
+footer .links {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer h5 {
+    margin: 0 0 30px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #4a5568;
+}
+
+footer .sublinks {
+    padding: 0;
+    list-style-type: none;
+}
+
+footer .sublinks li {
+    margin-top: 15px;
+}
+
+footer .sublinks a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    color: #4a5568;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+    transition: 0.5s;
+}
+
+footer .sublinks a:hover {
+    border-color: #4a5568;
+}
+
+footer .border {
+    border-bottom: 2px solid #e2e8f0;
+    margin: 64px 0;
+}
+
+.newsletter-form {
+    max-width: 400px;
+}
+
+footer .copyright {
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .copyright .logo {
+    font-size: 20px;
+}
+
+footer .copyright .logo img {
+    width: 32px;
+    height: 32px;
+}
+
+footer .copyright p {
+    color: #a0aec0;
+    font-weight: 500;
+}
+
+footer .social {
+    display: flex;
+}
+
+footer .social a {
+    padding: 8px;
+    background-color: #1a202c;
+    color: #fff;
+    margin-right: 16px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+footer .social a:last-child {
+    margin-right: 0;
+}
+
+footer .social a:hover {
+    background-color: #4a5568;
+}
+
+footer .social svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
 @media (min-width: 1024px) {
     .mobile-menu, .open, .closed {
         display: none !important;
@@ -442,6 +539,13 @@ img {
     .installed {
         margin-top: 30px !important;
     }
+
+    .newsletter-form {
+        width: 100%;
+        max-width: none;
+        text-align: center;
+        margin-top: 50px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -452,5 +556,26 @@ img {
     .btn-play {
         margin-left: 0;
         margin-top: 20px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer .links {
+        justify-content: center;
+    }
+
+    footer .links > div {
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+
+    .copyright {
+        flex-direction: column;
+    }
+
+    footer .copyright p {
+        margin: 30px 0;
     }
 }
