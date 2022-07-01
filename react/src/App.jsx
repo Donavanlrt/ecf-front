@@ -6,7 +6,13 @@ class App extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = { meals, filter: 'all' }
+    this.state = { meals, filter: 'all', selected: null }
+  }
+
+  selectMeal(meal) {
+    this.setState({ selected: meal })
+
+    setTimeout(() => this.setState({ selected: null }), 5000)
   }
 
   render() {
@@ -24,9 +30,18 @@ class App extends React.Component {
           </div>
         </div>
 
-        <div className="flex flex-wrap -mx-6 mt-6">
-          {meals.filter(meal => this.state.filter == 'all' || this.state.filter == meal.type).map((meal, key) => <Meal meal={meal} key={key} />)}
-        </div>
+        {this.state.selected &&
+          <div className="text-center my-16">
+            <h1 className="text-3xl text-emerald-500 mb-12">Vous avez commandé le repas {this.state.selected.title}</h1>
+            <img className="h-64 w-64 mx-auto object-cover rounded-t" src={this.state.selected.imageSrc} alt={this.state.selected.title} />
+          </div>
+        }
+
+        {!this.state.selected &&
+          <div className="flex flex-wrap -mx-6 mt-6">
+            {meals.filter(meal => this.state.filter == 'all' || this.state.filter == meal.type).map((meal, key) => <Meal meal={meal} key={key} onClick={() => this.selectMeal(meal)} />)}
+          </div>
+        }
       </div>
     )
   }

@@ -17,7 +17,7 @@ class Meal extends React.Component {
             </div>
 
             <div className="bg-[#ffffff70] absolute w-full h-full top-0 opacity-0 group-hover:opacity-100 flex items-center justify-center duration-200">
-              <button className="bg-[#6415ff] hover:bg-[#5011cc] text-sm text-white py-3 px-6 cursor-pointer rounded font-medium duration-200">Commander</button>
+              <button onClick={this.props.onClick} className="bg-[#6415ff] hover:bg-[#5011cc] text-sm text-white py-3 px-6 cursor-pointer rounded font-medium duration-200">Commander</button>
             </div>
           </div>
           <div className="p-4 bg-slate-100 rounded-b">
