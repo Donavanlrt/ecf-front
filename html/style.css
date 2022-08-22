@@ -76,6 +76,9 @@ a {
     border: 0;
     cursor: pointer;
     z-index: 1;
+    position: fixed;
+    top: 40px;
+    right: 50px;
 }
 
 .closed:hover, .open:hover {
